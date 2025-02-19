@@ -15,13 +15,54 @@ def drawSquare(myTurtle, size):
 def main():
     myTurtle = turtle.Turtle()
     # drawPolygon(myTurtle, 5) #draws a pentagon
-    # drawPolygon(myTurtle, 8) #draws an octogon
+    # drawPolygon(myTurtle, 8)
+
+    side_length = 50
+    num_sides = 8
+    myTurtle.forward(50)
+    angle = 360 / num_sides  
+    for i in range(num_sides) : 
+        myTurtle.forward(side_length)
+        myTurtle.right(angle)
+        
+    
+    side_length = 50
+    num_sides = 5
+    myTurtle.forward(50)
+    angle = 360 / num_sides
+    for i in range(num_sides) : 
+      myTurtle.forward(50)
+      myTurtle.right(angle)
+      
+    
 
     # fillCorner(myTurtle, 2) #draws a square with top right corner filled in.
-    # fillCorner(myTurtle, 3) #draws a square bottom left corner filled in.
+    
+    side_length = 200
+    myTurtle.penup()
+    myTurtle.goto(-100, -100)
+    myTurtle.pendown()
+    for _ in range(4):
+        myTurtle.forward(side_length)
+        myTurtle.left(90)
 
-    # squaresInSquares(myTurtle, 5) #draws 5 concentric squares
-    # squaresInSquares(myTurtle, 3) #draws 3 concentric squares
+    myTurtle.penup()
+    myTurtle.goto(0, 100)
+    myTurtle.pendown()
+    myTurtle.begin_fill()
+    myTurtle.forward(100)  
+    myTurtle.right(90)    
+    myTurtle.forward(100)  
+    myTurtle.right(90)    
+    myTurtle.forward(100)  
+    myTurtle.right(90)    
+    myTurtle.forward(100)  
+    myTurtle.end_fill()
+    
+    
 
+
+
+    
 
 main()
